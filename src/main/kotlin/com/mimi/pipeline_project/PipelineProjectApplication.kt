@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class PipelineProjectApplication
 
 fun main(args: Array<String>) {
-	runApplication<PipelineProjectApplication>(*args)
+    runApplication<PipelineProjectApplication>(*args)
 }

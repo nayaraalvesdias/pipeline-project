@@ -6,11 +6,8 @@ import java.io.IO.println
 
 @SpringBootTest
 class PipelineProjectApplicationTests {
-
-	@Test
-	fun test() {
-		println("hello")
-	}
-
-
+    @Test
+    fun test() {
+        println("hello")
+    }
 }
