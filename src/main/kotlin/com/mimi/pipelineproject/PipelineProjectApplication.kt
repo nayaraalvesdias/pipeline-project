@@ -1,4 +1,4 @@
-package com.mimi.pipeline_project
+package com.mimi.pipelineproject
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
