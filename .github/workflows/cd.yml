@@ -6,13 +6,9 @@ permissions:
 
 on:
   workflow_run:
-    workflows: [ "CI" ]
+    workflows: ["CI"]
     types:
       - completed
-  push:
-    branches:
-      - main
-  workflow_dispatch:
 
 jobs:
   deploy:
