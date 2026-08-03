@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pipeline-project
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: pipeline-project
+
+  template:
+    metadata:
+      labels:
+        app: pipeline-project
+
+    spec:
+      containers:
+        - name: pipeline-project
+          image: ghcr.io/nayaraalvesdias/pipeline-project:latest
+
+          ports:
+            - containerPort: 8080
+
+          envFrom:
+            - configMapRef:
+                name: pipeline-config
+            - secretRef:
+                name: pipeline-secret
