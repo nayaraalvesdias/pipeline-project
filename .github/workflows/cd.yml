@@ -67,6 +67,11 @@ jobs:
       - name: Setup kubectl
         uses: azure/setup-kubectl@v4
 
+      - name: Check kubeconfig
+        run: |
+          ls -la ~/.kube
+          cat ~/.kube/config
+
       - name: Create kubeconfig
         run: |
           mkdir -p ~/.kube
