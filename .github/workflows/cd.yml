@@ -6,9 +6,6 @@ permissions:
 
 on:
   workflow_run:
-    workflows: ["CI"]
-    types:
-      - completed
     branches:
       - main
 
