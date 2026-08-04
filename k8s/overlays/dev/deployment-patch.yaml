@@ -11,4 +11,4 @@ spec:
     spec:
       containers:
         - name: pipeline-project
-          image: ghcr.io/nayaraalvesdias/pipeline-project:dev
+          image: ghcr.io/nayaraalvesdias/pipeline-project:latest

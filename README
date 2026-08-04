@@ -1,0 +1,4 @@
+### Allow workloads on the control-plane (single-node cluster)
+
+```bash
+kubectl taint nodes --all node-role.kubernetes.io/control-plane-
