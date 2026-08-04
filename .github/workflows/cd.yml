@@ -9,6 +9,8 @@ on:
     workflows: ["CI"]
     types:
       - completed
+    branches:
+      - main
 
 jobs:
   deploy:
@@ -69,7 +71,7 @@ jobs:
       - name: Create kubeconfig
         run: |
           mkdir -p ~/.kube
-          echo "${{ secrets.KUBECONFIG }}" > ~/.kube/config
+          echo "${{ secrets.KUBECONFIG }}" > ~/.kube/config   
 
       - name: Check kubeconfig
         run: |
