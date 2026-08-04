@@ -60,10 +60,11 @@ jobs:
       - name: Setup kubectl
         uses: azure/setup-kubectl@v5
 
-      - name: Create kubeconfig
+      - name: Configure kubectl
         run: |
           mkdir -p ~/.kube
-          echo "${{ secrets.KUBECONFIG }}" > ~/.kube/config   
+          sudo cp /etc/kubernetes/admin.conf ~/.kube/config
+          sudo chown $USER:$USER ~/.kube/config 
 
       - name: Check kubeconfig
         run: |
