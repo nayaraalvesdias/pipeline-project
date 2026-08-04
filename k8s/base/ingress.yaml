@@ -5,6 +5,8 @@ metadata:
   namespace: dev
 spec:
   ingressClassName: nginx
+  hostNetwork: true
+  dnsPolicy: ClusterFirstWithHostNet
 
   rules:
     - http:
